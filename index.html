@@ -36,14 +36,29 @@
         max-height: 450px;
         overflow-y: scroll;
       }
+      .menu li {
+        margin-bottom: 5px;
+      }
+      .menu li a {
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: 600;
+        color: #030303;
+        box-sizing: border-box;
+        margin-bottom: 5px;
+        line-height: 130%;
+      }
       .submenu {
         list-style: none;
 
         margin: 0 0 0 20px;
         padding: 0;
       }
-      .submenu li {
+      .submenu li a {
         font-size: 90%;
+        font-weight: 300;
+        color: #383838;
       }
       .map__wrapper {
         display: flex;
@@ -95,14 +110,40 @@
     <script>
       var groups = [
         {
-          name: "Center",
+          name: "Центральный и северо-западный федеральный округ",
           style: "islands#redIcon",
           items: [
             {
               center: [55.701176, 37.655481],
-              name: "+7 (495) 144-04-46",
-              inner:
-                '<a href="tel:8988834984">test<a/> <br/> test <br/> test <br/> test  <br/>test test',
+              name: 'ООО "ТЕХНОГРУПП"',
+              footer:
+                '<a href="tel:8988834984">8 999 99 9999 9<a/> <br/> <a href="mailto:info@techno-grup.ru">info@techno-grup.ru<a/>',
+              header: 'ООО "ТЕХНОГРУПП"',
+              body: ' 108814 г. Москва , п.Сосенское, Калужское шоссе, 24-й км, вл.1, стр.1, БЦ "Высота"',
+            },
+            {
+              center: [55.701176, 37.655481],
+              name: 'ООО "ТЕХНОГРУПП"',
+              footer:
+                '<a href="tel:8988834984">8 999 99 9999 9<a/> <br/> <a href="mailto:info@techno-grup.ru">info@techno-grup.ru<a/>',
+              header: 'ООО "ТЕХНОГРУПП"',
+              body: ' 108814 г. Москва , п.Сосенское, Калужское шоссе, 24-й км, вл.1, стр.1, БЦ "Высота"',
+            },
+            {
+              center: [55.701176, 37.655481],
+              name: 'ООО "ТЕХНОГРУПП"',
+              footer:
+                '<a href="tel:8988834984">8 999 99 9999 9<a/> <br/> <a href="mailto:info@techno-grup.ru">info@techno-grup.ru<a/>',
+              header: 'ООО "ТЕХНОГРУПП"',
+              body: ' 108814 г. Москва , п.Сосенское, Калужское шоссе, 24-й км, вл.1, стр.1, БЦ "Высота"',
+            },
+            {
+              center: [55.701176, 37.655481],
+              name: 'ООО "ТЕХНОГРУПП"',
+              footer:
+                '<a href="tel:8988834984">8 999 99 9999 9<a/> <br/> <a href="mailto:info@techno-grup.ru">info@techno-grup.ru<a/>',
+              header: 'ООО "ТЕХНОГРУПП"',
+              body: ' 108814 г. Москва , п.Сосенское, Калужское шоссе, 24-й км, вл.1, стр.1, БЦ "Высота"',
             },
           ],
         },
@@ -202,7 +243,9 @@
             // Создаем метку.
             placemark = new ymaps.Placemark(item.center, {
               balloonContent: item.name,
-              balloonContentBody: item.inner,
+              balloonContentBody: item.body,
+              balloonContentHeader: item.header,
+              balloonContentFooter: item.footer,
             });
 
           // Добавляем метку в коллекцию.
