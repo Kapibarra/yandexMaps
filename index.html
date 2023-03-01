@@ -32,21 +32,26 @@
         background: #ffffff;
         box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.05);
         border-radius: 10px;
-        margin: 0;
         max-height: 450px;
         overflow-y: scroll;
+        margin-block-start: 0em !important;
+        margin-block-end: 0em !important;
       }
-      .menu li {
-        margin-bottom: 5px;
+      .menu__li {
+        margin-bottom: 15px;
+        min-height: 100px;
       }
       .menu li a {
+        text-decoration: none;
+      }
+      .menu__item {
         text-decoration: none;
         text-transform: uppercase;
         font-size: 16px;
         font-weight: 600;
         color: #030303;
         box-sizing: border-box;
-        margin-bottom: 5px;
+        margin-bottom: 15px;
         line-height: 130%;
       }
       .submenu {
@@ -69,7 +74,20 @@
         flex-wrap: nowrap;
         max-width: 1200px;
         margin: 0 auto;
+        margin-top: 20px;
         gap: 20px;
+      }
+      .ymaps-2-1-79-balloon-content__footer {
+        display: block;
+        margin: 5px 0 0;
+        color: #777;
+        font-size: 130% !important;
+      }
+      .ymaps-2-1-79-balloon-content__header {
+        display: block;
+        margin: 0 0 5px;
+        font-size: 120%;
+        font-weight: 700;
       }
       ::-webkit-scrollbar {
         width: 12px;
@@ -185,7 +203,7 @@
             "map",
             {
               center: [50.443705, 30.530946],
-              zoom: 12,
+              zoom: 10,
             },
             {
               searchControlProvider: "yandex#search",
@@ -200,7 +218,11 @@
 
         function createMenuGroup(group) {
           // Пункт меню.
-          var menuItem = $('<li><a href="#">' + group.name + "</a></li>"),
+          var menuItem = $(
+              '<li class="menu__li"><a href="#" class="menu__item">' +
+                group.name +
+                "</a></li>"
+            ),
             // Коллекция для геообъектов группы.
             collection = new ymaps.GeoObjectCollection(null, {
               preset: group.style,
