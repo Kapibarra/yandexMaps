@@ -100,16 +100,9 @@
           items: [
             {
               center: [55.701176, 37.655481],
-              balloonContentBody: "Содержимое <em>балуна</em> метки",
-              name: "108814 г. Москва , п.Сосенское, Калужское шоссе, 24-й км, вл.1, стр.1, БЦ <br /> +7 (495) 144-04-46 <br /> +7 (495) 144-04-46 <br /> +7 (495) 144-04-46",
-            },
-            {
-              center: [55.701176, 37.655481],
-              name: "2-й Кожуховский проезд, 12с11",
-            },
-            {
-              center: [55.701176, 37.655481],
-              name: "2-й Кожуховский проезд, 12с11",
+              name: "+7 (495) 144-04-46",
+              inner:
+                '<a href="tel:8988834984">test<a/> <br/> test <br/> test <br/> test  <br/>test test',
             },
           ],
         },
@@ -118,19 +111,7 @@
           style: "islands#greenIcon",
           items: [
             {
-              center: [55.701176, 37.655481],
-              name: "2-й Кожуховский проезд, 12с11",
-            },
-            {
-              center: [55.701176, 37.655481],
-              name: "2-й Кожуховский проезд, 12с11",
-            },
-            {
-              center: [55.701176, 37.655481],
-              name: "2-й Кожуховский проезд, 12с11",
-            },
-            {
-              center: [55.701176, 37.655481],
+              center: [55.701176, 39.655481],
               name: "2-й Кожуховский проезд, 12с11",
             },
           ],
@@ -208,13 +189,20 @@
             createSubMenu(group.items[j], collection, submenu);
           }
         }
-
+        myPlacemark = new ymaps.Placemark([55.907228, 31.260503], {
+          // Чтобы балун и хинт открывались на метке, необходимо задать ей определенные свойства.
+          balloonContentHeader: "Балун метки",
+          balloonContentBody: "Содержимое <em>балуна</em> метки",
+          balloonContentFooter: "Подвал",
+          hintContent: "Хинт метки",
+        });
         function createSubMenu(item, collection, submenu) {
           // Пункт подменю.
           var submenuItem = $('<li><a href="#">' + item.name + "</a></li>"),
             // Создаем метку.
             placemark = new ymaps.Placemark(item.center, {
               balloonContent: item.name,
+              balloonContentBody: item.inner,
             });
 
           // Добавляем метку в коллекцию.
