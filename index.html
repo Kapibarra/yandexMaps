@@ -38,11 +38,10 @@
       }
       .menu__li {
         margin-bottom: 15px;
-        min-height: 100px;
+        min-height: 80px;
       }
       .menu li a {
         text-decoration: none;
-        height: 50px;
         display: block !important;
       }
       .menu__item {
@@ -126,6 +125,13 @@
       }
       ::-webkit-scrollbar-thumb:window-inactive {
         background: rgba(255, 0, 0, 0.4);
+      }
+
+      @media screen and (max-width: 768px) {
+        .map__wrapper {
+          display: flex;
+          flex-direction: column-reverse;
+        }
       }
       /* Оформление меню (конец)*/
     </style>
@@ -235,16 +241,86 @@
           style: "islands#blueIcon",
           items: [
             {
-              center: [53.878044, 27.412441],
-              name: "УП ТЕХНОГРУПП",
+              center: [45.116254, 39.011057],
+              name: 'ООО "ПРИТЯЖЕНИЕ"',
+              footer:
+                '<a href="tel:+78005052330">8-800-505-23-30<a/> <br/> <a href="tel:+79181912802">8 (918) 191-28-02<a/><br/> <a href="mailto:krd.yug@mail.ru">krd.yug@mail.ru<a/> <br/> <a href="https://scrubbershop.ru/" target="blank">scrubbershop.ru/<a/>',
+              header: 'ООО "ПРИТЯЖЕНИЕ"',
+              body: '<img src="https://static.tildacdn.com/tild3836-3039-4337-b864-643464386164/Group_4378.png" height="40" width="230"> <br/> 350087, Краснодарский край, г.Краснодар, ул.Геологическая, д. 50, офис 1',
             },
             {
-              center: [53.878044, 27.412441],
-              name: "&quot;Дом с химерами&quot;",
+              center: [48.729494, 44.498883],
+              name: "ООО «Альфапро»",
+              footer:
+                '<a href="tel:+79053343311">8 (905) 334-33-11<a/> <br/><a href="mailto:Vladimir.Galkin@alfapro.su">Vladimir.Galkin@alfapro.su<a/>',
+              header: "ООО «Альфапро»",
+              body: '<img src="https://static.tildacdn.com/tild3836-3039-4337-b864-643464386164/Group_4378.png" height="40" width="230"> <br/> 400012 г. Волгоград, проспект имени Маршала Г.К.Жукова, дом 58, корпус 2, помещение 1',
+            },
+          ],
+        },
+        {
+          name: "Уральский Федеральный Округ",
+          style: "islands#blueIcon",
+          items: [
+            {
+              center: [55.130173, 61.401377],
+              name: "ООО «Лидер-СКЛАД»",
+              footer:
+                '<a href="tel:+79292735559">8 (929) 273-55-59<a/> <br/> <a href="mailto:ahmetova@lider-sklad.ru">ahmetova@lider-sklad.ru<a/> <br/> <a href="www.lider-sklad.ru" target="blank">www.lider-sklad.ru<a/>',
+              header: "ООО «Лидер-СКЛАД»",
+              body: '<img src="https://static.tildacdn.com/tild3836-3039-4337-b864-643464386164/Group_4378.png" height="40" width="230"> <br/> 454053 г.Челябинск, ул. Златоустовская, д.6',
             },
             {
-              center: [53.878044, 27.412441],
-              name: "Дом Рыцаря",
+              center: [55.159208, 61.422092],
+              name: "ООО «УБОРОЧНАЯ ТЕХНИКА»",
+              footer:
+                '<a href="tel:+79227284990">8 (922) 728-49-90<a/> <br/> <a href="mailto:info@ut-pro.ru">info@ut-pro.ru<a/> <br/> <a href="www.ut-pro.ru" target="blank">www.ut-pro.ru<a/>',
+              header: "ООО «УБОРОЧНАЯ ТЕХНИКА»",
+              body: '<img src="https://static.tildacdn.com/tild3836-3039-4337-b864-643464386164/Group_4378.png" height="40" width="230"> <br/> 454090, г. Челябинск, пр. Ленина, д. 27, стр. 7, оф.28',
+            },
+            {
+              center: [56.787691, 60.610931],
+              name: "ООО «ДИНАМИКА»",
+              footer:
+                '<a href="tel:+73432073375">8 (343) 207-33-75<a/> <br/> <a href="mailto:info@marketclean.ru">info@marketclean.ru<a/> <br/> <a href="www.marketclean.ru" target="blank">www.marketclean.ru<a/>',
+              header: "ООО «ДИНАМИКА»",
+              body: '<img src="https://static.tildacdn.com/tild3836-3039-4337-b864-643464386164/Group_4378.png" height="40" width="230"> <br/> 620085, г.Екатеринбург, 8 марта 267 лит М, подъезд 2',
+            },
+          ],
+        },
+        {
+          name: "Сибирский и Дальневосточный федеральные округи",
+          style: "islands#blueIcon",
+          items: [
+            {
+              center: [52.276271, 104.290398],
+              name: "Kомпания «СЭЙЛАР»",
+              footer:
+                '<a href="tel:+79149265766">8 (914) 926-57-66<a/> <br/> <a href="tel:+73952435425">8 (3952) 435-425<a/> <br/><a href="mailto:nilf-irk@mail.ru">nilf-irk@mail.ru<a/>',
+              header: "Торгово-сервисная компания «СЭЙЛАР»",
+              body: '<img src="https://static.tildacdn.com/tild3836-3039-4337-b864-643464386164/Group_4378.png" height="40" width="230"> <br/> 664003, г.Иркутск, ул.Лапина 43Б',
+            },
+            {
+              center: [54.960845, 82.887515],
+              name: "ООО «Н-КОМПАНИ»",
+              footer:
+                '<a href="tel:+79831285592">8 (925) 771-26-33<a/> <br/>  <a href="mailto:info@n-company.ru">info@n-company.ru<a/>',
+              header: "ООО «Н-КОМПАНИ»",
+              body: '<img src="https://static.tildacdn.com/tild3836-3039-4337-b864-643464386164/Group_4378.png" height="40" width="230"> <br/> 630024, г.Новосибирск, ул.Чукотская, 2а к7',
+            },
+          ],
+        },
+        {
+          name: "Республика Беларусь",
+          style: "islands#blueIcon",
+          items: [
+            {
+              center: [53.876027, 27.413708],
+              name: "УП Техновиза",
+              footer:
+                '<a href="tel:+375172380112">+375 17 238-01-12<a/> <br/> <a href="mailto:2380112@tehnoviza.by">2380112@tehnoviza.by<a/> <br/> <a href="https://tehclean.by/" target="blank">tehclean.by/<a/>',
+              header: "УП Техновиза",
+              body: '<img src="https://static.tildacdn.com/tild3836-3039-4337-b864-643464386164/Group_4378.png" height="40" width="230"> <br/> 220019, Беларусь, город Минск, 4-й переулок Монтажников, дом 5',
             },
           ],
         },
@@ -256,8 +332,8 @@
         var myMap = new ymaps.Map(
             "map",
             {
-              center: [50.443705, 30.530946],
-              zoom: 10,
+              center: [55.76, 37.64],
+              zoom: 14,
             },
             {
               searchControlProvider: "yandex#search",
